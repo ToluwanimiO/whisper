@@ -1,0 +1,16 @@
+<div style="height: 18vh; z-index: 1;background-color: #8A5D89;">
+    <a routerLink="../signIn" class="logOut">Logout</a>
+    <mat-icon svgIcon="whisper-logo" style="margin-top: -5vh;" aria-hidden="false" aria-label="Whisper Logo Icon" id="whisperIcon"></mat-icon>
+</div>
+<div style="z-index:100; margin-top: -8vh;">
+    <div class="col-10 mx-auto shadow bg-white">
+        <div class="row">
+            <div class="col-md-3 col-sm-4" style="padding: 0;">
+                <app-users [userId]="userId"></app-users>
+            </div>
+            <div class="col-md-9 col-sm-8" style="padding: 0;">
+                <app-messages [userId]="userId"></app-messages>
+            </div>
+        </div>
+    </div>
+</div>

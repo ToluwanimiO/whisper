@@ -1,0 +1,23 @@
+<!-- <div class="whisperDiv">
+    <mat-icon svgIcon="whisper-logo" aria-hidden="false" aria-label="Whisper Logo Icon" id="whisperIcon"></mat-icon>
+</div> -->
+<div class="main-div"> 
+    <div class="signInfo">
+        <h5>Sign In</h5><br /><br />
+        <p>Welcome to Whisper Chat App.<br /> Connect with Friends and Family</p>        
+    </div>
+    <mat-card class="signForm">
+        <div>
+            <small *ngIf="errorMsg == 'unsuccesful'" class="red">
+                Incorrect details
+            </small>
+        </div>
+        <form [formGroup]="signInForm">
+            <input type="text" formControlName="username" class="form-control" placeholder="Username"/><br />
+            <input type="password" formControlName="password" class="form-control" placeholder="Password"/><br />
+            <button class="btn btn-whisper" (click)="verify()">SIGN IN</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <font style="color:  rgb(97, 94, 97);">or</font>&nbsp;&nbsp;&nbsp;&nbsp;
+            <font routerLink="../signUp" class="signClick">SIGN UP</font>
+        </form>
+    </mat-card>
+</div>

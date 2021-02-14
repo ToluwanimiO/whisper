@@ -1,0 +1,27 @@
+<div>
+    <mat-dialog-actions>
+        <span class="fa fa-arrow-left" (click)=close() style="cursor: pointer;"></span>&nbsp;&nbsp;&nbsp;
+        Profile
+    </mat-dialog-actions>
+</div>
+<mat-dialog-content style="margin-top: 50px; margin-bottom: 20px; background-color: #d6cedb; padding: 20px 0px 20px !important;">
+    <img [src]="image" style="border-radius: 50%; height: 120px; width: 120px;" class="d-block mx-auto"/>
+</mat-dialog-content>
+<div style="line-height: 30px;">
+    <b><small style="color: #7b0caf;">Your details</small></b><br /><br />
+    <table>
+        <tr>
+            <td style="padding-right: 25px;"> username: {{name}}</td>
+            <td class="fa fa-pencil"></td>
+        </tr>
+        <tr>
+            <td style="padding-right: 25px;">email: {{fullDetails[0].email}}</td>
+            <td class="fa fa-pencil"></td>
+        </tr>
+    </table>
+   <!-- <br /> -->
+    <b routerLink="../../signIn" class="logOut" (click)="close()">LOG OUT</b>
+</div>
+<!-- <mat-dialog-content style="margin-top: 5px; background-color: #d6cedb; padding: 0px !important;">
+    <small style="font-size: 11px;">This name will be visible to all yourcontacts</small>
+</mat-dialog-content> -->

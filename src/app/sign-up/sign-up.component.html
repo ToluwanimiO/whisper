@@ -1,0 +1,56 @@
+<!-- <div class="whisperDiv">
+    <mat-icon svgIcon="whisper-logo" aria-hidden="false" aria-label="Whisper Logo Icon" id="whisperIcon"></mat-icon>
+</div> -->
+<div class="main-div"> 
+    <div class="signInfo">
+        <h5>Sign Up</h5><br /><br />
+        <mat-card-header>
+            <div>
+                <img class="d-block mx-auto" [src]="userForm.get('image').value" mat-card-avatar style="margin-top: -30px ;height: 100px;width:100px; border-radius: 50;" />
+            </div>
+        </mat-card-header>
+        <!-- EBDDF1 -->
+            <button class="fa fa-upload btn btn-sm btn-secondary" (click)="chooseImage()" style="margin-top: 5px; background-color:#4686A5;">Upload Profile</button>
+        <input type="file" class="d-none" id="imageInput" (change)="uploadImage($event)"/>
+        <p style="text-align: left;">Welcome to Whisper Chat App.<br /> Connect with Friends and Family</p>
+    </div>
+    <mat-card class="signForm">
+        <small *ngIf="errorMsg == 'unsuccesful'" class="red">
+            Unsuccesful submission
+        </small>
+        <form [formGroup]="userForm">
+            <input type="text" required formControlName="fullName" class="form-control" placeholder="Full Name"/><br />
+            <input type="text" required formControlName="email" class="form-control" placeholder="Email adress" appEmailValidator>
+            <small *ngIf="userForm.get('email').invalid && userForm.get('email').touched" class="red">
+                <small *ngIf="userForm.get('email').errors.email_error">
+                    Invalid email
+                </small>
+            </small><br />
+            <input type="text" required formControlName="phone" class="form-control" placeholder="Phone Number"/>
+            <small *ngIf="userForm.get('phone').invalid && userForm.get('phone').touched" class="red">
+                <small *ngIf="userForm.get('phone').errors.minlength">
+                    The minimum number is 11
+                </small>
+                <small *ngIf="userForm.get('phone').errors.maxlength">
+                    The maximum number is 11
+                </small>
+            </small><br />
+            <input type="text" required formControlName="username" class="form-control" placeholder="Username"/><br />
+            <input type="password" required formControlName="password" class="form-control passControl" placeholder="Password"/>&nbsp;
+            <input type="password" required formControlName="c_password" class="form-control passControl" placeholder="Confirm Password" />
+            <!-- <input type="text" required formControlName="c_password" class="form-control passControl" placeholder="Confirm Password" appPassword [passwordType]="userForm.get('password').value" /> -->
+            <!-- <small class="row" class="red">
+                <small class="col-md-6">
+
+                </small>
+                <small class="col-md-6" *ngIf="userForm.get('c_password').errors.match">
+                    Password does not match
+                </small>
+            </small> -->
+            <br /><br />
+            <button class="btn btn-whisper" (click)="submitForm()">SIGN UP</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <font style="color:  rgb(97, 94, 97);">or</font>&nbsp;&nbsp;&nbsp;&nbsp;
+            <font routerLink="../signIn" class="signClick">SIGN IN</font>
+        </form>
+    </mat-card>
+</div>

@@ -1,0 +1,11 @@
+.logOut{
+    text-align: right;
+    display: block; 
+    padding-right: 5em; 
+    padding-top: 1em; 
+    color: white;
+}
+.logOut:hover , .logOut:focus{
+    text-decoration: none;
+    color: #E2D4EB;
+}

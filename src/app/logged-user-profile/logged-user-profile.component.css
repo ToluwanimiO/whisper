@@ -1,0 +1,19 @@
+/* ::ng-deep .Profile{
+    padding: 0px !important;
+    height: 100%; */
+/* } */
+.logOut{
+    text-align: right;
+    display: block; 
+    padding-right: 5em; 
+    padding-top: 1em; 
+    position: absolute;
+    bottom: 5px;
+    text-decoration: none;
+    outline: none;
+}
+.logOut:hover , .logOut:focus{
+    text-decoration: none;
+    color: #40145c;
+    cursor: pointer;
+}
